@@ -13,3 +13,50 @@
 .hero-blob {
   animation: float 7s ease-in-out infinite;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.animate-fade-up-delay {
+  animation: fadeUp 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes cinematicZoom {
+  0% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero-cinematic {
+  animation: cinematicZoom 18s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes ctaGlow {
+  0%,
+  100% {
+    box-shadow: 0 14px 30px -14px rgba(241, 76, 28, 0.9);
+  }
+  50% {
+    box-shadow: 0 18px 36px -12px rgba(241, 76, 28, 1);
+  }
+}
+
+.cta-glow {
+  animation: ctaGlow 2.8s ease-in-out infinite;
+}

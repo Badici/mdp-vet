@@ -3,7 +3,7 @@ import {
   AboutPreviewSection,
   ContactCtaSection,
   ServicesPreviewSection,
-  TestimonialsSection,
+  TeamSection,
   WhyChooseSection,
 } from "@/components/home-sections";
 
@@ -14,7 +14,7 @@ export default function Home() {
       <WhyChooseSection />
       <ServicesPreviewSection />
       <AboutPreviewSection />
-      <TestimonialsSection />
+      <TeamSection />
       <ContactCtaSection />
     </>
   );
