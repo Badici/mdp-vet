@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLink, PhoneCall } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { clinicInfo, navLinks, socialLinks } from "@/lib/site-data";
@@ -16,14 +17,22 @@ export function Header() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-2 text-xs">
           <div className="flex items-center gap-6">
             {clinicInfo.locations.map((location) => (
-              <a key={location.name} href={location.phoneHref} className="opacity-90 transition hover:opacity-100">
+              <a key={location.name} href={location.phoneHref} className="inline-flex items-center gap-1.5 opacity-90 transition hover:opacity-100">
+                <PhoneCall className="h-3.5 w-3.5" aria-hidden />
                 {location.name}: {location.phoneDisplay}
               </a>
             ))}
           </div>
           <div className="flex items-center gap-3">
             {socialLinks.map((social) => (
-              <a key={social.label} href={social.href} className="opacity-90 transition hover:text-[var(--brand)]" target="_blank" rel="noopener noreferrer">
+              <a
+                key={social.label}
+                href={social.href}
+                className="inline-flex items-center gap-1.5 opacity-90 transition hover:text-[var(--brand)]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden />
                 {social.label}
               </a>
             ))}

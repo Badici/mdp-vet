@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "Clinica Veterinară MDP Vet | Diagnostic, tratament, monitorizare",
   description:
     "MDP Vet oferă servicii veterinare specializate în București: medicină internă, cardiologie, imagistică, chirurgie și consultații programate.",
+  icons: {
+    icon: [{ url: "/Logo_mdp_vet.ico?v=2" }],
+    shortcut: [{ url: "/Logo_mdp_vet.ico?v=2" }],
+    apple: [{ url: "/Logo_mdp_vet.png?v=2" }],
+  },
   openGraph: {
     title: "MDP Vet - Clinica veterinară în Titan",
     description:

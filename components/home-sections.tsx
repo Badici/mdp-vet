@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { services, teamMembers, whyChooseUs } from "@/lib/site-data";
+import { PhoneCall } from "lucide-react";
+import { clinicInfo, services, teamMembers, whyChooseUs } from "@/lib/site-data";
 import { ServiceCard } from "@/components/service-card";
 
 export function WhyChooseSection() {
@@ -98,8 +99,8 @@ export function AboutPreviewSection() {
             profesioniști care tratează fiecare pacient cu responsabilitate și compasiune.
           </p>
           <p className="mt-4 text-sm leading-7 text-white/90">
-            Acoperim medicină internă, cardiologie, nefrologie, dermatologie, oftalmologie, boli infecțioase,
-            imagistică și chirurgie generală, cu planuri de tratament adaptate fiecărui caz.
+            Echipa noastră acoperă medicină internă, cardiologie, oftalmologie și chirurgie generală, cu planuri de
+            tratament adaptate fiecărui caz.
           </p>
           <Link
             href="/despre-noi"
@@ -124,15 +125,15 @@ export function AboutPreviewSection() {
             className="h-44 w-full rounded-2xl border border-white/20 object-cover"
           />
           <Image
-            src="/images/mdp/dr-monica-bilan.jpg"
-            alt="Dr. Monica Bilan"
+            src="/images/mdp/dr-madalina-ochirosii.jpg"
+            alt="Dr. Mădălina Ochiroșii"
             width={1200}
             height={800}
             className="h-44 w-full rounded-2xl border border-white/20 object-cover"
           />
           <Image
-            src="/images/mdp/dr-georgiana-nastase.jpg"
-            alt="Dr. Georgiana Năstase"
+            src="/images/mdp/dr-alexandru-poenaru.jpg"
+            alt="Dr. Alexandru Poenaru"
             width={1200}
             height={800}
             className="h-44 w-full rounded-2xl border border-white/20 object-cover"
@@ -191,6 +192,18 @@ export function ContactCtaSection() {
             Contactează-ne pentru programări și evaluări de specialitate. Confirmarea finală a programării se face
             telefonic de către recepție.
           </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {clinicInfo.locations.map((location) => (
+              <a
+                key={location.name}
+                href={location.phoneHref}
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--ink)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+              >
+                <PhoneCall className="h-4 w-4" aria-hidden />
+                Sună {location.name}
+              </a>
+            ))}
+          </div>
           <Link
             href="/contact"
             className="mt-5 inline-flex w-fit rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--brand-deep)]"

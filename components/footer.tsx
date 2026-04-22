@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLink, Mail, MapPin, PhoneCall } from "lucide-react";
 import { clinicInfo, navLinks, socialLinks } from "@/lib/site-data";
 
 export function Footer() {
@@ -29,14 +30,19 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-[var(--ink)]">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-[var(--ink-soft)]">
-            <li>{clinicInfo.address}</li>
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 text-[var(--brand)]" aria-hidden />
+              <span>{clinicInfo.address}</span>
+            </li>
             <li>
-              <a href={clinicInfo.phoneHref} className="transition hover:text-[var(--brand)]">
+              <a href={clinicInfo.phoneHref} className="inline-flex items-center gap-2 transition hover:text-[var(--brand)]">
+                <PhoneCall className="h-4 w-4 text-[var(--brand)]" aria-hidden />
                 {clinicInfo.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={`mailto:${clinicInfo.email}`} className="transition hover:text-[var(--brand)]">
+              <a href={`mailto:${clinicInfo.email}`} className="inline-flex items-center gap-2 transition hover:text-[var(--brand)]">
+                <Mail className="h-4 w-4 text-[var(--brand)]" aria-hidden />
                 {clinicInfo.email}
               </a>
             </li>
@@ -44,12 +50,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[var(--ink)]">Locații & social</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-[var(--ink)]">Locații</h4>
           <ul className="mt-3 space-y-2 text-sm text-[var(--ink-soft)]">
             {clinicInfo.locations.map((location) => (
               <li key={location.name}>
-                <a href={location.phoneHref} className="transition hover:text-[var(--brand)]">
-                  {location.name}
+                <a href={location.phoneHref} className="inline-flex items-center gap-2 transition hover:text-[var(--brand)]">
+                  <PhoneCall className="h-4 w-4 text-[var(--brand)]" aria-hidden />
+                  {location.name} - {location.phoneDisplay}
                 </a>
               </li>
             ))}
@@ -61,8 +68,9 @@ export function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-[var(--muted)] px-3 py-1 text-[var(--ink-soft)] transition hover:text-[var(--brand)]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[var(--muted)] px-3 py-1 text-[var(--ink-soft)] transition hover:text-[var(--brand)]"
               >
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden />
                 {social.label}
               </a>
             ))}

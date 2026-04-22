@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, PhoneCall } from "lucide-react";
 import { heroHighlights, trustPoints } from "@/lib/site-data";
 
 export function Hero() {
@@ -30,15 +31,17 @@ export function Hero() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="cta-glow rounded-full bg-[var(--brand)] px-8 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_-14px_rgba(241,76,28,0.9)] transition hover:-translate-y-0.5 hover:bg-[var(--brand-deep)]"
+              className="cta-glow inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-8 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_-14px_rgba(241,76,28,0.9)] transition hover:-translate-y-0.5 hover:bg-[var(--brand-deep)]"
             >
+              <PhoneCall className="h-4 w-4" aria-hidden />
               Sună pentru programare
             </Link>
             <Link
               href="/servicii"
-              className="rounded-full border border-white/35 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white/95 transition hover:border-white/50 hover:bg-white/20"
+              className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white/95 transition hover:border-white/50 hover:bg-white/20"
             >
               Vezi servicii
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
         </div>

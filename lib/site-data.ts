@@ -13,12 +13,7 @@ export const clinicInfo = {
   email: "contact@mdp-vet.ro",
   locations: [
     {
-      name: "MDP Vet Câmpia Libertății",
-      phoneDisplay: "021 794 49 94",
-      phoneHref: "tel:+40217944994",
-    },
-    {
-      name: "MDP Vet Titan",
+      name: "MDP Vet Titan - Strada Armeniș",
       phoneDisplay: "0374 91 99 99",
       phoneHref: "tel:+40374919999",
     },
@@ -33,7 +28,6 @@ export const clinicInfo = {
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/mdpvet/" },
   { label: "Instagram", href: "https://www.instagram.com/mdpvet/" },
-  { label: "YouTube", href: "https://www.youtube.com/" },
 ];
 
 export const navLinks = [
@@ -59,32 +53,35 @@ export const teamMembers = [
   {
     name: "Dr. Miruna Chiriac",
     specialties: "Cardiologie, Medicină internă",
+    availability: "Disponibilă permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
+    competencies: [
+      "Medicină internă",
+      "Cardiologie veterinară",
+      "Ecografie cardiacă și abdominală",
+      "Medicină de urgență",
+    ],
     image: "/images/mdp/dr-miruna-chiriac.jpg",
   },
   {
     name: "Dr. Georgiana Voicu",
-    specialties: "Oftalmologie, Chirurgie",
+    specialties: "Oftalmologie, Chirurgie generală",
+    availability: "Disponibilă permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
+    competencies: ["Medicină internă", "Oftalmologie veterinară", "Chirurgie veterinară", "Medicină de urgență"],
     image: "/images/mdp/dr-georgiana-voicu.jpg",
   },
   {
     name: "Dr. Mădălina Ochiroșii",
     specialties: "Medicină internă",
+    availability: "Disponibilă în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
+    competencies: ["Medicină internă", "Ecografie abdominală", "Medicină de urgență"],
     image: "/images/mdp/dr-madalina-ochirosii.jpg",
   },
   {
     name: "Dr. Alexandru Poenaru",
     specialties: "Medicină internă, Chirurgie",
+    availability: "Disponibil permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
+    competencies: ["Medicină internă", "Chirurgie", "Medicină de urgență"],
     image: "/images/mdp/dr-alexandru-poenaru.jpg",
-  },
-  {
-    name: "Dr. Monica Bilan",
-    specialties: "Medicină internă, Dermatologie",
-    image: "/images/mdp/dr-monica-bilan.jpg",
-  },
-  {
-    name: "Dr. Georgiana Năstase",
-    specialties: "Nefrologie, Boli infecțioase",
-    image: "/images/mdp/dr-georgiana-nastase.jpg",
   },
 ];
 
@@ -110,7 +107,7 @@ export const whyChooseUs = [
 export const services: Service[] = [
   {
     name: "Medicină internă",
-    availability: "Disponibil în toate locațiile",
+    availability: "Disponibil în locația Titan (Strada Armeniș)",
     description:
       "Consulturi complete pentru afecțiuni acute și cronice, cu accent pe prevenție și monitorizare.",
   },
@@ -122,7 +119,7 @@ export const services: Service[] = [
   },
   {
     name: "Nefrologie | Urologie",
-    availability: "Disponibil în toate locațiile",
+    availability: "Disponibil în locația Titan (Strada Armeniș)",
     description:
       "Investigații dedicate afecțiunilor renale și urinare, orientate către tratamentul cauzei.",
   },
@@ -140,13 +137,13 @@ export const services: Service[] = [
   },
   {
     name: "Boli infecțioase",
-    availability: "Disponibil în toate locațiile",
+    availability: "Disponibil în locația Titan (Strada Armeniș)",
     description:
       "Protocol de diagnostic, izolare și tratament pentru patologiile infecțioase majore.",
   },
   {
     name: "Imagistică",
-    availability: "Disponibil în toate locațiile",
+    availability: "Disponibil în locația Titan (Strada Armeniș)",
     description:
       "Ecografie și investigații complementare pentru confirmarea rapidă a diagnosticului.",
   },
