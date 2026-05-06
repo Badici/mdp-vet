@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { teamMembers } from "@/lib/site-data";
+import { TeamMemberCard } from "@/components/team-member-card";
 
 export const metadata: Metadata = {
   title: "Despre noi | MDP Vet",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { label: "Pacienți în comunitatea MDP Vet", value: "7.000+" },
-  { label: "Medici în echipa actuală", value: "4" },
+  { label: "Membri ai echipei în această secțiune", value: "3" },
   { label: "Program extins în timpul săptămânii", value: "09:00 - 21:00" },
 ];
 
@@ -31,8 +32,8 @@ export default function DespreNoiPage() {
                 ridicate, într-un mediu în care pacientul și aparținătorul primesc atenție reală.
               </p>
               <p className="mt-4 text-[var(--ink-soft)]">
-                Echipa MDP Vet Titan (Strada Armeniș) oferă consultații de medicină internă, cardiologie,
-                oftalmologie, chirurgie generală și medicină de urgență.
+                Echipa din locația Titan (Strada Armeniș) oferă consultații și servicii veterinare complete, cu accente în medicină
+                internă, chirurgie, oftalmologie și îngrijire de urgență, în funcție de nevoile pacientului.
               </p>
               <p className="mt-4 text-lg font-semibold text-[var(--ink)]">Ați venit bine. Și veți pleca de la noi și mai bine.</p>
               <Link
@@ -61,25 +62,18 @@ export default function DespreNoiPage() {
           ))}
         </div>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-bold text-[var(--ink)]">Medicii noștri</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
+        <div className="mt-14">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-6">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand)]">Echipa clinică</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-[var(--ink)] md:text-3xl">
+                Cunoaște medicii și tehnicienii MDP Vet
+              </h2>
+            </div>
+          </div>
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {teamMembers.map((member) => (
-              <article key={member.name} className="overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]">
-                <Image src={member.image} alt={member.name} width={1200} height={800} className="h-56 w-full object-cover" />
-                <div className="p-4">
-                  <h3 className="font-semibold text-[var(--ink)]">{member.name}</h3>
-                  <p className="text-sm text-[var(--ink-soft)]">{member.specialties}</p>
-                  {"availability" in member ? <p className="mt-3 text-sm text-[var(--ink-soft)]">{member.availability}</p> : null}
-                  {"competencies" in member ? (
-                    <ul className="mt-3 space-y-1 text-sm text-[var(--ink-soft)]">
-                      {member.competencies.map((skill) => (
-                        <li key={skill}>- {skill}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              </article>
+              <TeamMemberCard key={member.name} member={member} />
             ))}
           </div>
         </div>

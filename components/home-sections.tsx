@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PhoneCall } from "lucide-react";
 import { clinicInfo, services, teamMembers, whyChooseUs } from "@/lib/site-data";
 import { ServiceCard } from "@/components/service-card";
+import { TeamMemberCard } from "@/components/team-member-card";
 
 export function WhyChooseSection() {
   return (
@@ -99,8 +100,8 @@ export function AboutPreviewSection() {
             profesioniști care tratează fiecare pacient cu responsabilitate și compasiune.
           </p>
           <p className="mt-4 text-sm leading-7 text-white/90">
-            Echipa noastră acoperă medicină internă, cardiologie, oftalmologie și chirurgie generală, cu planuri de
-            tratament adaptate fiecărui caz.
+            Echipa noastră include medici și tehnicieni dedicați, cu planuri de tratament adaptate fiecărui pacient și comunicare
+            clară cu familiile acestora.
           </p>
           <Link
             href="/despre-noi"
@@ -109,35 +110,23 @@ export function AboutPreviewSection() {
             Descoperă povestea noastră
           </Link>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Image
-            src="/images/mdp/dr-miruna-chiriac.jpg"
-            alt="Dr. Miruna Chiriac"
-            width={1200}
-            height={800}
-            className="h-44 w-full rounded-2xl border border-white/20 object-cover"
-          />
-          <Image
-            src="/images/mdp/dr-georgiana-voicu.jpg"
-            alt="Dr. Georgiana Voicu"
-            width={1200}
-            height={800}
-            className="h-44 w-full rounded-2xl border border-white/20 object-cover"
-          />
-          <Image
-            src="/images/mdp/dr-madalina-ochirosii.jpg"
-            alt="Dr. Mădălina Ochiroșii"
-            width={1200}
-            height={800}
-            className="h-44 w-full rounded-2xl border border-white/20 object-cover"
-          />
-          <Image
-            src="/images/mdp/dr-alexandru-poenaru.jpg"
-            alt="Dr. Alexandru Poenaru"
-            width={1200}
-            height={800}
-            className="h-44 w-full rounded-2xl border border-white/20 object-cover"
-          />
+        <div className="grid gap-3 sm:grid-cols-3">
+          {teamMembers.map((member) => (
+            <div key={member.name} className="overflow-hidden rounded-2xl border border-white/20 bg-white/5">
+              <Image
+                src={member.image}
+                alt={member.imageAlt}
+                width={960}
+                height={720}
+                className="h-40 w-full object-cover object-top sm:h-44"
+                sizes="(max-width: 640px) 100vw, 33vw"
+              />
+              <div className="border-t border-white/10 px-3 py-2.5">
+                <p className="text-xs font-semibold text-white">{member.name}</p>
+                <p className="mt-0.5 text-[11px] uppercase tracking-wider text-white/75">{member.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -151,29 +140,23 @@ export function TeamSection() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand)]">Echipa MDP Vet</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink)]">Fă cunoștință cu medicii noștri</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink)] sm:text-4xl">
+              Medici și tehnicieni dedicați pacienților
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-soft)]">
+              Profiluri actuale ale echipei clinicii: experiență clinică, pasiune pentru specialitate și o relație empatică cu
+              proprietarii.
+            </p>
           </div>
           <span className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[var(--ink-soft)]">
-            Specialiști pe departamente
+            Echipă în spotlight
           </span>
         </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {teamMembers.map((member) => (
-            <article key={member.name} className="group overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-sm">
-              <div className="overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={1920}
-                  height={1280}
-                  className="h-60 w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-[var(--ink)]">{member.name}</h3>
-                <p className="mt-1 text-sm text-[var(--ink-soft)]">{member.specialties}</p>
-              </div>
-            </article>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {teamMembers.map((member, idx) => (
+            <div key={member.name} className="animate-fade-up" style={{ animationDelay: `${idx * 100}ms` }}>
+              <TeamMemberCard member={member} />
+            </div>
           ))}
         </div>
       </div>

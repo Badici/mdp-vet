@@ -49,39 +49,45 @@ export const heroHighlights = [
   "Monitorizare",
 ];
 
-export const teamMembers = [
+export type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  imageAlt: string;
+  bio: string[];
+};
+
+export const teamMembers: TeamMember[] = [
   {
-    name: "Dr. Miruna Chiriac",
-    specialties: "Cardiologie, Medicină internă",
-    availability: "Disponibilă permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
-    competencies: [
-      "Medicină internă",
-      "Cardiologie veterinară",
-      "Ecografie cardiacă și abdominală",
-      "Medicină de urgență",
+    name: "Dr. Daniela Silvia Faget",
+    role: "Medic veterinar",
+    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    imageAlt: "Dr. Daniela Silvia Faget, medic veterinar la Clinica Veterinară MDP Vet",
+    bio: [
+      "Medic veterinar, absolventă a Facultății de Medicină Veterinară din cadrul Universității Spiru Haret, cu o experiență de aproximativ 10 ani în cadrul MDP Vet.",
+      "Este pasionată de dermatologie, etologie și nutriție, abordând fiecare caz cu atenție și implicare. Din 2022 face parte din comitetul editorial al Romanian Journal of Veterinary Medicine and Pharmacology.",
+      "Se remarcă prin empatie, răbdare și o comunicare clară cu proprietarii, punând un accent deosebit pe prevenție și îngrijirea corectă a animalelor pe termen lung.",
     ],
-    image: "/images/mdp/dr-miruna-chiriac.jpg",
   },
   {
     name: "Dr. Georgiana Voicu",
-    specialties: "Oftalmologie, Chirurgie generală",
-    availability: "Disponibilă permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
-    competencies: ["Medicină internă", "Oftalmologie veterinară", "Chirurgie veterinară", "Medicină de urgență"],
+    role: "Medic veterinar",
     image: "/images/mdp/dr-georgiana-voicu.jpg",
+    imageAlt: "Dr. Georgiana Voicu, medic veterinar la Clinica Veterinară MDP Vet",
+    bio: [
+      "Medic veterinar, cu o experiență clinică de peste 10 ani, dedicată practicii medicale și perfecționării continue.",
+      "Este pasionată de oftalmologie, chirurgie și medicină internă, domenii în care și-a dezvoltat competențele prin colaborări cu profesori universitari și prin implicare activă în cazuri complexe.",
+      "Se remarcă prin atenția la detalii, abordarea riguroasă și orientarea către rezultate durabile, punând întotdeauna accent pe evoluția pacientului pe termen lung. Este un medic empatic, cu o afinitate deosebită pentru pacienții felini, reușind să gestioneze cu calm și eficiență chiar și cele mai sensibile cazuri.",
+    ],
   },
   {
-    name: "Dr. Mădălina Ochiroșii",
-    specialties: "Medicină internă",
-    availability: "Disponibilă în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
-    competencies: ["Medicină internă", "Ecografie abdominală", "Medicină de urgență"],
-    image: "/images/mdp/dr-madalina-ochirosii.jpg",
-  },
-  {
-    name: "Dr. Alexandru Poenaru",
-    specialties: "Medicină internă, Chirurgie",
-    availability: "Disponibil permanent în Clinica Veterinară MDP Vet Titan (Strada Armeniș).",
-    competencies: ["Medicină internă", "Chirurgie", "Medicină de urgență"],
-    image: "/images/mdp/dr-alexandru-poenaru.jpg",
+    name: "Georgiana Ochetan",
+    role: "Tehnician veterinar",
+    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    imageAlt: "Georgiana Ochetan, tehnician veterinar la Clinica Veterinară MDP Vet",
+    bio: [
+      "Absolventă a Școlii de Tehnicieni Veterinari din 2024, face parte din echipa MDP Vet din 2025. Este pasionată de anestezie și medicina de urgență.",
+    ],
   },
 ];
 
