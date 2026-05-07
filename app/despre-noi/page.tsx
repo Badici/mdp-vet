@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { label: "Pacienți în comunitatea MDP Vet", value: "7.000+" },
-  { label: "Membri ai echipei în această secțiune", value: "3" },
+  { label: "Membri ai echipei în această secțiune", value: "5" },
   { label: "Program extins în timpul săptămânii", value: "09:00 - 21:00" },
 ];
 

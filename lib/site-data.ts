@@ -81,12 +81,32 @@ export const teamMembers: TeamMember[] = [
     ],
   },
   {
+    name: "Dr. Maria Butunoiu",
+    role: "Medic veterinar",
+    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    imageAlt: "Dr. Maria Butunoiu, medic veterinar la Clinica Veterinară MDP Vet",
+    bio: [
+      "Absolventă a Facultății de Medicină Veterinară București, promoția 2022, a acumulat experiență practică încă din perioada facultății, lucrând în cabinete veterinare mai întâi ca asistent veterinar, iar ulterior ca medic veterinar.",
+      "Deține certificări de perfecționare în anestezie, obținute în cadrul platformei educaționale Vet Akademos, și este pasionată de medicină internă și anestezie.",
+      "Abordează fiecare caz cu calm, responsabilitate și atenție la detalii, punând accent pe monitorizare atentă a pacienților și pe oferirea unor îngrijiri medicale cât mai sigure și eficiente. Consideră că un act medical de calitate îmbină competența și terapiile moderne cu empatia, compasiunea și respectul pentru nevoile fiecărui animal și ale familiei sale.",
+    ],
+  },
+  {
     name: "Georgiana Ochetan",
     role: "Tehnician veterinar",
     image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
     imageAlt: "Georgiana Ochetan, tehnician veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Absolventă a Școlii de Tehnicieni Veterinari din 2024, face parte din echipa MDP Vet din 2025. Este pasionată de anestezie și medicina de urgență.",
+    ],
+  },
+  {
+    name: "Clara Rădulescu",
+    role: "Tehnician veterinar",
+    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    imageAlt: "Clara Rădulescu, tehnician veterinar la Clinica Veterinară MDP Vet",
+    bio: [
+      "Este tehnician veterinar, o prezență caldă și implicată în îngrijirea pacienților noștri. Iubește animalele și este foarte dedicată bunăstării acestora, oferind răbdare și grijă fiecărui pacient. Prin seriozitate și implicare constantă, contribuie la confortul animalelor și la buna desfășurare a activității medicale din cadrul clinicii.",
     ],
   },
 ];
