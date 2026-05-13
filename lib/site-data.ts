@@ -134,7 +134,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Dr. Daniela Silvia Faget",
     role: "Medic veterinar",
-    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    image: "/images/mdp/Faget.jpeg",
     imageAlt: "Dr. Daniela Silvia Faget, medic veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Medic veterinar, absolventă a Facultății de Medicină Veterinară din cadrul Universității Spiru Haret, cu o experiență de aproximativ 10 ani în cadrul MDP Vet.",
@@ -145,7 +145,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Dr. Georgiana Voicu",
     role: "Medic veterinar",
-    image: "/images/mdp/dr-georgiana-voicu.jpg",
+    image: "/images/mdp/Georgiana_Voicu.jpeg",
     imageAlt: "Dr. Georgiana Voicu, medic veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Medic veterinar, cu o experiență clinică de peste 10 ani, dedicată practicii medicale și perfecționării continue.",
@@ -176,7 +176,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Clara Rădulescu",
     role: "Tehnician veterinar",
-    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    image: "/images/mdp/Clara.jpeg",
     imageAlt: "Clara Rădulescu, tehnician veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Este tehnician veterinar, o prezență caldă și implicată în îngrijirea pacienților noștri. Iubește animalele și este foarte dedicată bunăstării acestora, oferind răbdare și grijă fiecărui pacient. Prin seriozitate și implicare constantă, contribuie la confortul animalelor și la buna desfășurare a activității medicale din cadrul clinicii.",

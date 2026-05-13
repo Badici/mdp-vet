@@ -15,10 +15,10 @@ export function TeamMemberCard({ member, imageClassName, bodyClassName }: TeamMe
           src={member.image}
           alt={member.imageAlt}
           width={960}
-          height={720}
+          height={1280}
           className={
             imageClassName ??
-            "h-56 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03] md:h-60"
+            "aspect-[3/4] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           }
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
         />

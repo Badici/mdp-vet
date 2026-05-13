@@ -117,8 +117,8 @@ export function AboutPreviewSection() {
                 src={member.image}
                 alt={member.imageAlt}
                 width={960}
-                height={720}
-                className="h-40 w-full object-cover object-top sm:h-44"
+                height={1280}
+                className="aspect-[3/4] w-full object-cover object-top"
                 sizes="(max-width: 640px) 100vw, 33vw"
               />
               <div className="border-t border-white/10 px-3 py-2.5">

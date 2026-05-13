@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ServiceCard } from "@/components/service-card";
-import { services } from "@/lib/site-data";
+import { cabinetGalleryPhotos, services } from "@/lib/site-data";
+
+const serviciiCoverPhoto = cabinetGalleryPhotos[0];
 
 export const metadata: Metadata = {
   title: "Servicii medicale veterinare | MDP Vet",
@@ -25,11 +27,12 @@ export default function ServiciiPage() {
               </p>
             </div>
             <Image
-              src="/images/mdp/dr-monica-bilan.jpg"
-              alt="Servicii medicale MDP Vet"
-              width={1920}
-              height={1280}
+              src={serviciiCoverPhoto.src}
+              alt={`${serviciiCoverPhoto.alt} — servicii veterinare MDP Vet Titan`}
+              width={serviciiCoverPhoto.width}
+              height={serviciiCoverPhoto.height}
               className="h-full min-h-72 w-full object-cover"
+              priority
             />
           </div>
         </div>
