@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall } from "lucide-react";
-import { clinicInfo, services, teamMembers, whyChooseUs } from "@/lib/site-data";
+import { cabinetHero, clinicInfo, services, teamMembers, whyChooseUs } from "@/lib/site-data";
 import { ServiceCard } from "@/components/service-card";
 import { TeamMemberCard } from "@/components/team-member-card";
 
@@ -64,10 +64,10 @@ export function ServicesPreviewSection() {
           </div>
           <div className="animate-fade-up overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-lg">
             <Image
-              src="/images/mdp/clinica-bg.jpg"
-              alt="Clinica MDP Vet"
-              width={1920}
-              height={1280}
+              src={cabinetHero.src}
+              alt={cabinetHero.alt}
+              width={cabinetHero.width}
+              height={cabinetHero.height}
               className="h-52 w-full rounded-2xl object-cover"
             />
             <div className="p-4">

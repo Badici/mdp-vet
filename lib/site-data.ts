@@ -49,6 +49,79 @@ export const heroHighlights = [
   "Monitorizare",
 ];
 
+const IMAGINI_CABINET = "/images/imagini-cabinet";
+
+function cabinetImageSrc(filename: string): string {
+  return `${IMAGINI_CABINET}/${encodeURIComponent(filename)}`;
+}
+
+/** Fotografie pentru hero „Despre noi” și preview pe pagina principală (înlocuiește fostul clinica-bg.jpg). */
+export const cabinetHero = {
+  src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58 (3).jpeg"),
+  width: 1448,
+  height: 1086,
+  alt: "Clinica MDP Vet Titan — spațiu modern de îngrijire medicală veterinară",
+} as const;
+
+export type CabinetPhoto = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+/** Toate fotografiile din public/images/imagini-cabinet — folosite în galeria „Despre noi”. */
+export const cabinetGalleryPhotos: CabinetPhoto[] = [
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58.jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Interiorul clinicii MDP Vet — zona de consultație și echipamente",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58 (1).jpeg"),
+    width: 1086,
+    height: 1448,
+    alt: "Clinica veterinară MDP Vet — sală de examinare și monitorizare",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58 (2).jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Spațiu de lucru al echipei medicale MDP Vet",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58 (3).jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Recepție și primire pacienți la Clinica Veterinară MDP Vet",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.58 (4).jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Cabinet veterinar MDP Vet — zona de îngrijire a animalelor",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.59.jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Clinica MDP Vet — dotări și confort pentru pacienți",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.59 (1).jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "MDP Vet — imagine din interiorul clinicii din Titan, București",
+  },
+  {
+    src: cabinetImageSrc("WhatsApp Image 2026-05-13 at 09.33.59 (2).jpeg"),
+    width: 1448,
+    height: 1086,
+    alt: "Spațiu clinic MDP Vet pentru consultații și tratamente",
+  },
+];
+
 export type TeamMember = {
   name: string;
   role: string;

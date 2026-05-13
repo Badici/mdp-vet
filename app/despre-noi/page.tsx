@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { teamMembers } from "@/lib/site-data";
+import { cabinetGalleryPhotos, cabinetHero, teamMembers } from "@/lib/site-data";
 import { TeamMemberCard } from "@/components/team-member-card";
 
 export const metadata: Metadata = {
@@ -44,11 +44,12 @@ export default function DespreNoiPage() {
               </Link>
             </div>
             <Image
-              src="/images/mdp/clinica-bg.jpg"
-              alt="Clinica MDP Vet"
-              width={1920}
-              height={1280}
+              src={cabinetHero.src}
+              alt={cabinetHero.alt}
+              width={cabinetHero.width}
+              height={cabinetHero.height}
               className="h-full min-h-72 w-full object-cover"
+              priority
             />
           </div>
         </div>
@@ -60,6 +61,37 @@ export default function DespreNoiPage() {
               <p className="mt-1 text-sm text-[var(--ink-soft)]">{item.label}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-6">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand)]">Cabinetul nostru</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-[var(--ink)] md:text-3xl">
+                Spațiul clinicii în imagini
+              </h2>
+              <p className="mt-3 max-w-2xl text-[var(--ink-soft)]">
+                Locația MDP Vet din Titan (Strada Armeniș) — mediu curat, echipat pentru consultații, tratamente și monitorizare în siguranță.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {cabinetGalleryPhotos.map((photo) => (
+              <figure
+                key={photo.src}
+                className="group overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="aspect-[4/3] w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
 
         <div className="mt-14">
