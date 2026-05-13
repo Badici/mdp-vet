@@ -10,10 +10,14 @@ export const metadata: Metadata = {
     "Află povestea clinicii veterinare MDP Vet: o echipă de specialiști, servicii multidisciplinare și grijă reală pentru animale.",
 };
 
-const stats = [
+const stats: { label: string; value: string; labelNote?: string }[] = [
   { label: "Pacienți în comunitatea MDP Vet", value: "7.000+" },
   { label: "Membri ai echipei în această secțiune", value: "5" },
-  { label: "Program extins în timpul săptămânii", value: "09:00 - 21:00" },
+  {
+    label: "Program extins în timpul săptămânii",
+    value: "09:00 - 21:00",
+    labelNote: "(sâmbătă: 9-14)",
+  },
 ];
 
 export default function DespreNoiPage() {
@@ -58,7 +62,15 @@ export default function DespreNoiPage() {
           {stats.map((item) => (
             <div key={item.label} className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-sm">
               <p className="text-3xl font-bold text-[var(--ink)]">{item.value}</p>
-              <p className="mt-1 text-sm text-[var(--ink-soft)]">{item.label}</p>
+              <p className="mt-1 text-sm leading-snug text-[var(--ink-soft)]">
+                {item.label}
+                {item.labelNote ? (
+                  <>
+                    {" "}
+                    <span className="text-xs text-[var(--ink-soft)]">{item.labelNote}</span>
+                  </>
+                ) : null}
+              </p>
             </div>
           ))}
         </div>
