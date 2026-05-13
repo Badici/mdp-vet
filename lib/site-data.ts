@@ -156,7 +156,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Dr. Maria Butunoiu",
     role: "Medic veterinar",
-    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    image: "/images/mdp/butunoiu.jpeg",
     imageAlt: "Dr. Maria Butunoiu, medic veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Absolventă a Facultății de Medicină Veterinară București, promoția 2022, a acumulat experiență practică încă din perioada facultății, lucrând în cabinete veterinare mai întâi ca asistent veterinar, iar ulterior ca medic veterinar.",
@@ -167,7 +167,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Georgiana Ochetan",
     role: "Tehnician veterinar",
-    image: "https://placehold.co/960x720/e2e8f0/64748b/png?text=MDP+Vet",
+    image: "/images/mdp/ochetan.jpeg",
     imageAlt: "Georgiana Ochetan, tehnician veterinar la Clinica Veterinară MDP Vet",
     bio: [
       "Absolventă a Școlii de Tehnicieni Veterinari din 2024, face parte din echipa MDP Vet din 2025. Este pasionată de anestezie și medicina de urgență.",
