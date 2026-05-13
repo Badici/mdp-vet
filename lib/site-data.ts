@@ -25,6 +25,14 @@ export const clinicInfo = {
   ],
 };
 
+/** Fațada clinicii — imagini în cardurile de contact (pagina Contact și CTA pe Acasă). */
+export const contactClinicExteriorPhoto = {
+  src: "/images/imagini-cabinet/poza-exterior.jpeg",
+  width: 1600,
+  height: 1200,
+  alt: "Fațada Clinicii Veterinare MDP Vet pe Strada Armeniș, Sector 3, București",
+} as const;
+
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/mdpvet/" },
   { label: "Instagram", href: "https://www.instagram.com/mdpvet/" },

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall } from "lucide-react";
-import { cabinetHero, clinicInfo, services, teamMembers, whyChooseUs } from "@/lib/site-data";
+import { cabinetHero, clinicInfo, contactClinicExteriorPhoto, services, teamMembers, whyChooseUs } from "@/lib/site-data";
 import { ServiceCard } from "@/components/service-card";
 import { TeamMemberCard } from "@/components/team-member-card";
 
@@ -196,11 +196,11 @@ export function ContactCtaSection() {
         </div>
         <div className="overflow-hidden rounded-3xl">
           <Image
-            src="/images/mdp/contact-cover.jpg"
-            alt="Contact MDP Vet"
-            width={1920}
-            height={1200}
-            className="h-full min-h-52 w-full object-cover"
+            src={contactClinicExteriorPhoto.src}
+            alt={contactClinicExteriorPhoto.alt}
+            width={contactClinicExteriorPhoto.width}
+            height={contactClinicExteriorPhoto.height}
+            className="h-full min-h-52 w-full object-cover object-center"
           />
         </div>
       </div>

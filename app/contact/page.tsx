@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Clock3, Mail, MapPin, Navigation, PhoneCall } from "lucide-react";
 import { ContactAppointmentForm } from "@/components/contact-appointment-form";
-import { clinicInfo } from "@/lib/site-data";
+import { clinicInfo, contactClinicExteriorPhoto } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Contact | MDP Vet",
@@ -59,11 +59,11 @@ export default function ContactPage() {
               ))}
             </ul>
             <Image
-              src="/images/mdp/contact-cover.jpg"
-              alt="MDP Vet contact"
-              width={1920}
-              height={1200}
-              className="mt-6 h-44 w-full rounded-2xl object-cover"
+              src={contactClinicExteriorPhoto.src}
+              alt={contactClinicExteriorPhoto.alt}
+              width={contactClinicExteriorPhoto.width}
+              height={contactClinicExteriorPhoto.height}
+              className="mt-6 h-44 w-full rounded-2xl object-cover object-center"
             />
             <a
               href="https://maps.google.com/?q=Strada+Armeni%C8%99+nr.2,+Sector+3,+Bucure%C8%99ti"
