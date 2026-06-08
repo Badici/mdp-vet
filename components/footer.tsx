@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Mail, MapPin, PhoneCall } from "lucide-react";
+import { legalLinks } from "@/lib/legal-links";
 import { clinicInfo, navLinks, socialLinks } from "@/lib/site-data";
 
 export function Footer() {
@@ -78,8 +79,21 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[var(--border)] py-4 text-center text-xs text-[var(--ink-soft)]">
-        © {new Date().getFullYear()} {clinicInfo.fullName}. Toate drepturile rezervate.
+      <div className="border-t border-[var(--border)] px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 text-center text-xs text-[var(--ink-soft)] md:flex-row md:text-left">
+          <p>© {new Date().getFullYear()} {clinicInfo.fullName}. Toate drepturile rezervate.</p>
+          <nav aria-label="Documente legale">
+            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-end">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="transition hover:text-[var(--brand)]">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
   );
